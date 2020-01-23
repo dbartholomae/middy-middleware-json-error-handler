@@ -4,9 +4,9 @@
 /** An additional comment to make sure Typedoc attributes the comment above to the file itself */
 import debugFactory, { IDebugger } from 'debug'
 import { HandlerLambda, MiddlewareFunction, MiddlewareObject } from 'middy'
-import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
 import { serializeError } from 'serialize-error'
 import { omit } from './helpers/omit'
+import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
 
 /** The actual middleware */
 export class JSONErrorHandlerMiddleware

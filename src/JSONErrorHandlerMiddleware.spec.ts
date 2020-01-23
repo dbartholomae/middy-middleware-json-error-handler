@@ -1,7 +1,7 @@
 import JSONErrorHandlerMiddleware from './JSONErrorHandlerMiddleware'
 
-import createHttpError from 'http-errors'
 import { Context } from 'aws-lambda'
+import createHttpError from 'http-errors'
 
 describe('JSONErrorHandlerMiddleware', () => {
   describe('onError hook', () => {
@@ -11,11 +11,11 @@ describe('JSONErrorHandlerMiddleware', () => {
       it('sets the response status code to 400', async () => {
         const next = jest.fn()
         const handler = {
+          callback: jest.fn(),
           context: {} as Context,
           error: createHttpError(statusCode, 'Oops'),
           event: {},
-          response: {},
-          callback: jest.fn()
+          response: {}
         }
         await JSONErrorHandlerMiddleware().onError(handler, next)
         expect((handler.response as any).statusCode).toEqual(400)
@@ -24,11 +24,11 @@ describe('JSONErrorHandlerMiddleware', () => {
       it('stringifies the error message', async () => {
         const next = jest.fn()
         const handler = {
+          callback: jest.fn(),
           context: {} as Context,
           error: createHttpError(statusCode, 'Oops'),
           event: {},
-          response: {},
-          callback: jest.fn()
+          response: {}
         }
         await JSONErrorHandlerMiddleware().onError(handler, next)
         expect(JSON.parse((handler.response as any).body)).toMatchObject({
@@ -39,11 +39,11 @@ describe('JSONErrorHandlerMiddleware', () => {
       it('strips the stack', async () => {
         const next = jest.fn()
         const handler = {
+          callback: jest.fn(),
           context: {} as Context,
           error: createHttpError(statusCode, 'Oops'),
           event: {},
-          response: {},
-          callback: jest.fn()
+          response: {}
         }
         await JSONErrorHandlerMiddleware().onError(handler, next)
         expect(JSON.parse((handler.response as any).body).stack).toBeUndefined()
@@ -56,11 +56,11 @@ describe('JSONErrorHandlerMiddleware', () => {
       it('sets the response status code to 500', async () => {
         const next = jest.fn()
         const handler = {
+          callback: jest.fn(),
           context: {} as Context,
           error: createHttpError(statusCode, 'Oops'),
           event: {},
-          response: {},
-          callback: jest.fn()
+          response: {}
         }
         await JSONErrorHandlerMiddleware().onError(handler, next)
         expect((handler.response as any).statusCode).toEqual(500)
@@ -69,11 +69,11 @@ describe('JSONErrorHandlerMiddleware', () => {
       it('returns only status code and the default message "Internal server error"', async () => {
         const next = jest.fn()
         const handler = {
+          callback: jest.fn(),
           context: {} as Context,
           error: createHttpError(statusCode, 'Oops'),
           event: {},
-          response: {},
-          callback: jest.fn()
+          response: {}
         }
         await JSONErrorHandlerMiddleware().onError(handler, next)
         expect(JSON.parse((handler.response as any).body)).toEqual({

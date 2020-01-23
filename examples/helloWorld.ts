@@ -1,7 +1,7 @@
+import { APIGatewayEvent } from 'aws-lambda'
+import createHttpError from 'http-errors'
 import middy from 'middy'
 import JSONErrorHandlerMiddleware from '../'
-import createHttpError from 'http-errors'
-import { APIGatewayEvent } from 'aws-lambda'
 
 // This is your AWS handler
 async function helloWorld (event: APIGatewayEvent) {

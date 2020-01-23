@@ -14,7 +14,7 @@ export function omit<T, K extends string> (
     idx += 1
   }
 
-  for (var prop in obj) {
+  for (const prop in obj) {
     if (!index.hasOwnProperty(prop)) {
       result[prop] = obj[prop]
     }
