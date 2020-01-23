@@ -1,0 +1,6 @@
+{
+  "exclude": "**/*.spec.ts",
+  "module": "commonjs",
+  "out": "docs",
+  "hideGenerator": true
+}

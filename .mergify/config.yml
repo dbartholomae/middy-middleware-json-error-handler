@@ -1,0 +1,27 @@
+pull_request_rules:
+  - name: automatic merge for Greenkeeper pull requests
+    conditions:
+      - author=greenkeeper[bot]
+      - "status-success=License Compliance"
+      - "status-success=ci/circleci: build"
+      - "status-success=ci/circleci: install"
+      - "status-success=ci/circleci: test"
+      - "status-success=codecov/patch"
+      - "status-success=codecov/project"
+      - "status-success=greenkeeper/verify"
+    actions:
+      merge:
+        method: merge
+  - name: automatic merge my own pull requests
+    conditions:
+      - author=dbartholomae
+      - "status-success=License Compliance"
+      - "status-success=ci/circleci: build"
+      - "status-success=ci/circleci: install"
+      - "status-success=ci/circleci: test"
+      - "status-success=codecov/patch"
+      - "status-success=codecov/project"
+      - "status-success=greenkeeper/verify"
+    actions:
+      merge:
+        method: merge
