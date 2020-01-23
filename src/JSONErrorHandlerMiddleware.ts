@@ -29,12 +29,16 @@ export class JSONErrorHandlerMiddleware
   ) => {
     const error = handler.error
     if (isErrorWithStatusCode(error) && error.statusCode < 500) {
+      this.logger(
+        `Responding with full error as statusCode is ${error.statusCode}`
+      )
       handler.response = {
         body: JSON.stringify(omit(['stack'], serializeError(error))),
         statusCode: error.statusCode
       }
       return
     }
+    this.logger('Responding with internal server error')
     handler.response = {
       body: JSON.stringify({
         message: 'Internal server error',
