@@ -6,7 +6,7 @@ version: 2
 jobs:
   install:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - checkout
@@ -27,7 +27,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - attach_workspace:
@@ -48,7 +48,7 @@ jobs:
 
   test:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - attach_workspace:
@@ -78,7 +78,7 @@ jobs:
 
   release:
     docker:
-    - image: circleci/node:8
+    - image: circleci/node:12
     working_directory: ~/repo
     steps:
     - attach_workspace:
