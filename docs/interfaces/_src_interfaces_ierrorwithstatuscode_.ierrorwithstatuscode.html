@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;examples/helloWorld&quot; | middy-middleware-json-error-handler</title>
+	<title>IErrorWithStatusCode | middy-middleware-json-error-handler</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,72 +56,51 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_examples_helloworld_.html">&quot;examples/helloWorld&quot;</a>
+					<a href="../modules/_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IErrorWithStatusCode&quot;</a>
+				</li>
+				<li>
+					<a href="_src_interfaces_ierrorwithstatuscode_.ierrorwithstatuscode.html">IErrorWithStatusCode</a>
 				</li>
 			</ul>
-			<h1>External module &quot;examples/helloWorld&quot;</h1>
+			<h1>Interface IErrorWithStatusCode</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IErrorWithStatusCode</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Variables</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_examples_helloworld_.html#handler" class="tsd-kind-icon">handler</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_examples_helloworld_.html#helloworld" class="tsd-kind-icon">hello<wbr>World</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_interfaces_ierrorwithstatuscode_.ierrorwithstatuscode.html#statuscode" class="tsd-kind-icon">status<wbr>Code</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="handler" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> handler</h3>
-					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Middy</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">APIGatewayProxyEvent</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = middy(helloWorld).use(JSONErrorHandlerMiddleware())</span></div>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="statuscode" class="tsd-anchor"></a>
+					<h3>status<wbr>Code</h3>
+					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/examples/helloWorld.ts#L20">examples/helloWorld.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/src/interfaces/IErrorWithStatusCode.ts#L2">src/interfaces/IErrorWithStatusCode.ts:2</a></li>
 						</ul>
 					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="helloworld" class="tsd-anchor"></a>
-					<h3>hello<wbr>World</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">hello<wbr>World<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">APIGatewayEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/examples/helloWorld.ts#L7">examples/helloWorld.ts:7</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">APIGatewayEvent</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -131,33 +110,42 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_examples_helloworld_.html">&quot;examples/hello<wbr>World&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_examples_helloworld_int_spec_.html">&quot;examples/hello<wbr>World.int-<wbr>spec&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONError<wbr>Handler<wbr>Middleware&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_src_helpers_omit_.html">&quot;src/helpers/omit&quot;</a>
+					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_examples_helloworld_.html">&quot;examples/hello<wbr>World&quot;</a>
+						<a href="../modules/_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IError<wbr>With<wbr>Status<wbr>Code&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_examples_helloworld_int_spec_.html">&quot;examples/hello<wbr>World.int-<wbr>spec&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONError<wbr>Handler<wbr>Middleware&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_src_helpers_omit_.html">&quot;src/helpers/omit&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IError<wbr>With<wbr>Status<wbr>Code&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_handler_.html">&quot;test/handler&quot;</a>
+						<a href="../modules/_test_handler_.html">&quot;test/handler&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_examples_helloworld_.html#handler" class="tsd-kind-icon">handler</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_src_interfaces_ierrorwithstatuscode_.ierrorwithstatuscode.html" class="tsd-kind-icon">IError<wbr>With<wbr>Status<wbr>Code</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_src_interfaces_ierrorwithstatuscode_.ierrorwithstatuscode.html#statuscode" class="tsd-kind-icon">status<wbr>Code</a>
+							</li>
+						</ul>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_examples_helloworld_.html#helloworld" class="tsd-kind-icon">hello<wbr>World</a>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_src_interfaces_ierrorwithstatuscode_.html#iserrorwithstatuscode" class="tsd-kind-icon">is<wbr>Error<wbr>With<wbr>Status<wbr>Code</a>
 					</li>
 				</ul>
 			</nav>

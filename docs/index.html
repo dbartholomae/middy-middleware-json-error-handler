@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>middy-middleware-jwt-auth</title>
+	<title>middy-middleware-json-error-handler</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">middy-middleware-jwt-auth</a>
+					<a href="index.html" class="title">middy-middleware-json-error-handler</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>middy-middleware-jwt-auth</h1>
+			<h1>middy-middleware-json-error-handler</h1>
 		</div>
 	</div>
 </header>
@@ -64,76 +64,44 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#middy-middleware-jwt-auth" id="middy-middleware-jwt-auth" style="color: inherit; text-decoration: none;">
-					<h1>middy-middleware-jwt-auth</h1>
+				<a href="#middy-middleware-json-error-handler" id="middy-middleware-json-error-handler" style="color: inherit; text-decoration: none;">
+					<h1>middy-middleware-json-error-handler</h1>
 				</a>
-				<p> <a href="https://npmjs.org/package/middy-middleware-jwt-auth"><img src="https://badge.fury.io/js/middy-middleware-jwt-auth.svg" alt="npm version"></a>  <a href="https://npmjs.org/package/middy-middleware-jwt-auth"><img src="https://img.shields.io/npm/dw/middy-middleware-jwt-auth.svg" alt="downloads"></a>  <a href="https://github.com/dbartholomae/middy-middleware-jwt-auth/issues"><img src="https://img.shields.io/github/issues-raw/dbartholomae/middy-middleware-jwt-auth.svg" alt="open issues"></a>  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fdbartholomae%2Fmiddy-middleware-jwt-auth?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdbartholomae%2Fmiddy-middleware-jwt-auth.svg?type=shield" alt="FOSSA Status"></a> <a href="https://github.com/visionmedia/debug#readme"><img src="https://img.shields.io/badge/debug-blue.svg" alt="debug"></a>  <a href="https://circleci.com/gh/dbartholomae/workflows/middy-middleware-jwt-auth/tree/master"><img src="https://img.shields.io/circleci/project/github/dbartholomae/middy-middleware-jwt-auth/master.svg?style=flat" alt="build status"></a>  <a href="https://codecov.io/gh/dbartholomae/middy-middleware-jwt-auth"><img src="https://codecov.io/gh/dbartholomae/middy-middleware-jwt-auth/branch/master/graph/badge.svg" alt="codecov"></a>  <a href="https://david-dm.org/dbartholomae/middy-middleware-jwt-auth"><img src="https://david-dm.org/dbartholomae/middy-middleware-jwt-auth.svg?theme=shields.io" alt="dependency status"></a>  <a href="https://david-dm.org/dbartholomae/middy-middleware-jwt-auth?type=dev"><img src="https://david-dm.org/dbartholomae/middy-middleware-jwt-auth/dev-status.svg" alt="devDependency status"></a>  <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/dbartholomae/middy-middleware-jwt-auth.svg" alt="Greenkeeper"></a>  <a href="https://github.com/semantic-release/semantic-release#badge"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic release"></a>  <a href="https://gitter.im/middy-middleware-jwt-auth"><img src="https://badges.gitter.im/dbartholomae/middy-middleware-jwt-auth.svg" alt="Gitter"></a> </p>
-				<p>A <a href="https://github.com/middyjs/middy">middy</a> JSON web token authorization middleware inspired by express-jwt.</p>
+				<p> <a href="https://npmjs.org/package/middy-middleware-json-error-handler"><img src="https://badge.fury.io/js/middy-middleware-json-error-handler.svg" alt="npm version"></a>  <a href="https://npmjs.org/package/middy-middleware-json-error-handler"><img src="https://img.shields.io/npm/dw/middy-middleware-json-error-handler.svg" alt="downloads"></a>  <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/issues"><img src="https://img.shields.io/github/issues-raw/dbartholomae/middy-middleware-json-error-handler.svg" alt="open issues"></a>  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fdbartholomae%2Fmiddy-middleware-json-error-handler?ref=badge_shield"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdbartholomae%2Fmiddy-middleware-json-error-handler.svg?type=shield" alt="FOSSA Status"></a> <a href="https://github.com/visionmedia/debug#readme"><img src="https://img.shields.io/badge/debug-blue.svg" alt="debug"></a>  <a href="https://circleci.com/gh/dbartholomae/workflows/middy-middleware-json-error-handler/tree/master"><img src="https://img.shields.io/circleci/project/github/dbartholomae/middy-middleware-json-error-handler/master.svg?style=flat" alt="build status"></a>  <a href="https://codecov.io/gh/dbartholomae/middy-middleware-json-error-handler"><img src="https://codecov.io/gh/dbartholomae/middy-middleware-json-error-handler/branch/master/graph/badge.svg" alt="codecov"></a>  <a href="https://david-dm.org/dbartholomae/middy-middleware-json-error-handler"><img src="https://david-dm.org/dbartholomae/middy-middleware-json-error-handler.svg?theme=shields.io" alt="dependency status"></a>  <a href="https://david-dm.org/dbartholomae/middy-middleware-json-error-handler?type=dev"><img src="https://david-dm.org/dbartholomae/middy-middleware-json-error-handler/dev-status.svg" alt="devDependency status"></a>  <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/dbartholomae/middy-middleware-json-error-handler.svg" alt="Greenkeeper"></a>  <a href="https://github.com/semantic-release/semantic-release#badge"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic release"></a>  <a href="https://gitter.im/middy-middleware-json-error-handler"><img src="https://badges.gitter.im/dbartholomae/middy-middleware-json-error-handler.svg" alt="Gitter"></a></p>
+				<p>A <a href="https://github.com/middyjs/middy">middy</a> middleware that returns errors as http errors, compatible with <a href="https://www.npmjs.com/package/http-errors">http-errors</a>.</p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
 				<p>Download node at <a href="http://nodejs.org">nodejs.org</a> and install it, if you haven&#39;t already.</p>
-				<pre><code class="language-sh">npm install middy-middleware-jwt-auth --save</code></pre>
+				<pre><code class="language-sh">npm install middy-middleware-json-error-handler --save</code></pre>
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>
 				</a>
-				<p>There is <a href="https://dbartholomae.github.com/middy-middleware-jwt-auth">additional documentation</a>. </p>
+				<p>There is <a href="https://dbartholomae.github.com/middy-middleware-json-error-handler">additional documentation</a>.</p>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> createHttpError <span class="hljs-keyword">from</span> <span class="hljs-string">'http-errors'</span>
-<span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'middy'</span>
-<span class="hljs-keyword">import</span> { httpErrorHandler, httpHeaderNormalizer } <span class="hljs-keyword">from</span> <span class="hljs-string">'middy/middlewares'</span>
-<span class="hljs-keyword">import</span> JWTAuthMiddleware, { EncryptionAlgorithms, IAuthorizedEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-jwt-auth'</span>
-
-<span class="hljs-comment">// Optionally define the token payload you expect to receive</span>
-<span class="hljs-keyword">interface</span> ITokenPayload {
-  permissions: <span class="hljs-built_in">string</span>[]
-}
-
-<span class="hljs-comment">// Optionally define a type guard for the token payload</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isTokenPayload</span> (<span class="hljs-params">token: <span class="hljs-built_in">any</span></span>): <span class="hljs-title">token</span> <span class="hljs-title">is</span> <span class="hljs-title">ITokenPayload</span> </span>{
-  <span class="hljs-keyword">return</span> token != <span class="hljs-literal">null</span> &amp;&amp;
-    <span class="hljs-built_in">Array</span>.isArray(token.permissions) &amp;&amp;
-    token.permissions.every(<span class="hljs-function">(<span class="hljs-params">permission: <span class="hljs-built_in">any</span></span>) =&gt;</span> <span class="hljs-keyword">typeof</span> permission === <span class="hljs-string">'string'</span>)
-}
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'middy'</span>
+<span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-json-error-handler'</span>
+<span class="hljs-keyword">import</span> createHttpError <span class="hljs-keyword">from</span> <span class="hljs-string">'http-errors'</span>
+<span class="hljs-keyword">import</span> { APIGatewayEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'aws-lambda'</span>
 
 <span class="hljs-comment">// This is your AWS handler</span>
-<span class="hljs-keyword">const</span> helloWorld = <span class="hljs-keyword">async</span> (event: IAuthorizedEvent&lt;ITokenPayload&gt;) =&gt; {
-  <span class="hljs-comment">// The middleware adds auth information if a valid token was added</span>
-  <span class="hljs-comment">// If no auth was found and credentialsRequired is set to true, a 401 will be thrown. If auth exists you</span>
-  <span class="hljs-comment">// have to check that it has the expected form.</span>
-  <span class="hljs-keyword">if</span> (event.auth!.payload.permissions.indexOf(<span class="hljs-string">'helloWorld'</span>) === <span class="hljs-number">-1</span>) {
-    <span class="hljs-keyword">throw</span> createHttpError(<span class="hljs-number">403</span>, <span class="hljs-string">`User not authorized for helloWorld, only found permissions [<span class="hljs-subst">${event.auth!.permissions.join(<span class="hljs-string">', '</span>)}</span>]`</span>, {
-      <span class="hljs-keyword">type</span>: <span class="hljs-string">'NotAuthorized'</span>
-    })
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">helloWorld</span> (<span class="hljs-params">event: APIGatewayEvent</span>) </span>{
+  <span class="hljs-keyword">if</span> (event.queryStringParameters?.search == <span class="hljs-literal">null</span>) {
+    <span class="hljs-comment">// If you throw an error with status code, the error will be returned as stringified JSON.</span>
+    <span class="hljs-comment">// Only the stack will be omitted.</span>
+    <span class="hljs-keyword">throw</span> createHttpError(<span class="hljs-number">400</span>, <span class="hljs-string">'Query has to include a search'</span>)
   }
 
-  <span class="hljs-keyword">return</span> {
-    body: <span class="hljs-built_in">JSON</span>.stringify({ data: <span class="hljs-string">`Hello world! Here's your token: <span class="hljs-subst">${event.auth!.token}</span>`</span> }),
-    statusCode: <span class="hljs-number">200</span>
-  }
+  <span class="hljs-comment">// If you throw an error with no status code, only a generic message will be shown to the user</span>
+  <span class="hljs-comment">// instead of the full error</span>
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Search is not implemented yet'</span>)
 }
 
 <span class="hljs-comment">// Let's "middyfy" our handler, then we will be able to attach middlewares to it</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> handler = middy(helloWorld)
-  .use(httpHeaderNormalizer()) <span class="hljs-comment">// Make sure authorization header is saved in lower case</span>
-  .use(httpErrorHandler()) <span class="hljs-comment">// This middleware is needed do handle the errors thrown by the JWTAuthMiddleware</span>
-  .use(JWTAuthMiddleware({
-    <span class="hljs-comment">/** Algorithm to verify JSON web token signature */</span>
-    algorithm: EncryptionAlgorithms.HS256,
-    <span class="hljs-comment">/** An optional boolean that enables making authorization mandatory */</span>
-    credentialsRequired: <span class="hljs-literal">true</span>,
-    <span class="hljs-comment">/** An optional function that checks whether the token payload is formatted correctly */</span>
-    isPayload: isTokenPayload,
-    <span class="hljs-comment">/** A string or buffer containing either the secret for HMAC algorithms, or the PEM encoded public key for RSA and ECDSA */</span>
-    secretOrPublicKey: <span class="hljs-string">'secret'</span>,
-    <span class="hljs-comment">/**
-     * An optional function used to search for a token e. g. in a query string. By default, and as a fall back,
-     * event.headers.authorization and event.headers.Authorization are used.
-     */</span>
-    tokenSource: <span class="hljs-function">(<span class="hljs-params">event: <span class="hljs-built_in">any</span></span>) =&gt;</span> event.queryStringParameters.token
-  }))</code></pre>
+  .use(JSONErrorHandlerMiddleware()) <span class="hljs-comment">// This middleware is needed do handle the errors thrown by the JWTAuthMiddleware</span></code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -149,13 +117,13 @@
 						<a href="modules/_examples_helloworld_int_spec_.html">&quot;examples/hello<wbr>World.int-<wbr>spec&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_src_jwtauthmiddleware_.html">&quot;src/JWTAuth<wbr>Middleware&quot;</a>
+						<a href="modules/_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONError<wbr>Handler<wbr>Middleware&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_src_interfaces_iauthoptions_.html">&quot;src/interfaces/IAuth<wbr>Options&quot;</a>
+						<a href="modules/_src_helpers_omit_.html">&quot;src/helpers/omit&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_src_interfaces_iauthorizedevent_.html">&quot;src/interfaces/IAuthorized<wbr>Event&quot;</a>
+						<a href="modules/_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IError<wbr>With<wbr>Status<wbr>Code&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_test_handler_.html">&quot;test/handler&quot;</a>

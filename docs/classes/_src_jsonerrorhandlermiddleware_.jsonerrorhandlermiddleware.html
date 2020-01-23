@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;examples/helloWorld&quot; | middy-middleware-json-error-handler</title>
+	<title>JSONErrorHandlerMiddleware | middy-middleware-json-error-handler</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,70 +56,148 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_examples_helloworld_.html">&quot;examples/helloWorld&quot;</a>
+					<a href="../modules/_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONErrorHandlerMiddleware&quot;</a>
+				</li>
+				<li>
+					<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html">JSONErrorHandlerMiddleware</a>
 				</li>
 			</ul>
-			<h1>External module &quot;examples/helloWorld&quot;</h1>
+			<h1>Class JSONErrorHandlerMiddleware</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The actual middleware</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">JSONErrorHandlerMiddleware</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">MiddlewareObject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Variables</h3>
+							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_examples_helloworld_.html#handler" class="tsd-kind-icon">handler</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Functions</h3>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_examples_helloworld_.html#helloworld" class="tsd-kind-icon">hello<wbr>World</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#logger" class="tsd-kind-icon">logger</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#onerror" class="tsd-kind-icon">on<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#create" class="tsd-kind-icon">create</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="handler" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> handler</h3>
-					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Middy</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">APIGatewayProxyEvent</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = middy(helloWorld).use(JSONErrorHandlerMiddleware())</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/examples/helloWorld.ts#L20">examples/helloWorld.ts:20</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="helloworld" class="tsd-anchor"></a>
-					<h3>hello<wbr>World</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">hello<wbr>World<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">APIGatewayEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new JSONError<wbr>Handler<wbr>Middleware<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html" class="tsd-signature-type">JSONErrorHandlerMiddleware</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/examples/helloWorld.ts#L7">examples/helloWorld.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/src/JSONErrorHandlerMiddleware.ts#L19">src/JSONErrorHandlerMiddleware.ts:19</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new JSON error handler middleware</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html" class="tsd-signature-type">JSONErrorHandlerMiddleware</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IDebugger</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/src/JSONErrorHandlerMiddleware.ts#L19">src/JSONErrorHandlerMiddleware.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The logger used in the module</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onerror" class="tsd-anchor"></a>
+					<h3>on<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Error<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HandlerLambda</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/src/JSONErrorHandlerMiddleware.ts#L27">src/JSONErrorHandlerMiddleware.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>event: <span class="tsd-signature-type">APIGatewayEvent</span></h5>
+									<h5>handler: <span class="tsd-signature-type">HandlerLambda</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="create" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html" class="tsd-signature-type">JSONErrorHandlerMiddleware</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dbartholomae/middy-middleware-json-error-handler/blob/608f265/src/JSONErrorHandlerMiddleware.ts#L14">src/JSONErrorHandlerMiddleware.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html" class="tsd-signature-type">JSONErrorHandlerMiddleware</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -131,34 +209,49 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_examples_helloworld_.html">&quot;examples/hello<wbr>World&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_examples_helloworld_int_spec_.html">&quot;examples/hello<wbr>World.int-<wbr>spec&quot;</a>
+					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_examples_helloworld_.html">&quot;examples/hello<wbr>World&quot;</a>
+						<a href="../modules/_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONError<wbr>Handler<wbr>Middleware&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_examples_helloworld_int_spec_.html">&quot;examples/hello<wbr>World.int-<wbr>spec&quot;</a>
+						<a href="../modules/_src_helpers_omit_.html">&quot;src/helpers/omit&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_src_jsonerrorhandlermiddleware_.html">&quot;src/JSONError<wbr>Handler<wbr>Middleware&quot;</a>
+						<a href="../modules/_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IError<wbr>With<wbr>Status<wbr>Code&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_src_helpers_omit_.html">&quot;src/helpers/omit&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_src_interfaces_ierrorwithstatuscode_.html">&quot;src/interfaces/IError<wbr>With<wbr>Status<wbr>Code&quot;</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_handler_.html">&quot;test/handler&quot;</a>
+						<a href="../modules/_test_handler_.html">&quot;test/handler&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_examples_helloworld_.html#handler" class="tsd-kind-icon">handler</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html" class="tsd-kind-icon">JSONError<wbr>Handler<wbr>Middleware</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#logger" class="tsd-kind-icon">logger</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#onerror" class="tsd-kind-icon">on<wbr>Error</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_jsonerrorhandlermiddleware_.jsonerrorhandlermiddleware.html#create" class="tsd-kind-icon">create</a>
+							</li>
+						</ul>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_examples_helloworld_.html#helloworld" class="tsd-kind-icon">hello<wbr>World</a>
-					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
