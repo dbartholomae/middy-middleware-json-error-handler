@@ -70,7 +70,7 @@ jobs:
       - run:
           name: Run integration tests
           command: |
-            npx concurrently --kill-others --success first "cd test && serverless offline" "wait-on http://localhost:3000/status && jest -c jest.integration.config.js --testResultsProcessor=\"jest-junit\""
+            npx concurrently --kill-others --success first "cd test && serverless offline" "wait-on http://localhost:3000/dev/status && jest -c jest.integration.config.js --testResultsProcessor=\"jest-junit\""
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/integration/test-results-integration.xml"
       - store_test_results:
