@@ -28,7 +28,8 @@
   "dependencies": {
     "@types/debug": ">=4.1.0",
     "debug": ">=4.1.0",
-    "serialize-error": ">=5.0.0"
+    "serialize-error": ">=5.0.0",
+    "snyk": "^1.305.0"
   },
   "peerDependencies": {
     "middy": ">=0.22.0"
@@ -48,7 +49,9 @@
     "test:unit": "jest",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
-    "precommit:lint:fix": "tslint --project tsconfig.json --fix"
+    "precommit:lint:fix": "tslint --project tsconfig.json --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
@@ -89,5 +92,6 @@
     "wait-on": "^4.0.0",
     "webpack": "^4.37.0"
   },
-  "repository": "git@github.com:dbartholomae/middy-middleware-json-error-handler.git"
+  "repository": "git@github.com:dbartholomae/middy-middleware-json-error-handler.git",
+  "snyk": true
 }
