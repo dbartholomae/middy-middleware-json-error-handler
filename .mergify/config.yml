@@ -1,14 +1,14 @@
 pull_request_rules:
-  - name: automatic merge for Greenkeeper pull requests
+  - name: automatic merge for snyk-bot pull requests
     conditions:
-      - author=greenkeeper[bot]
+      - author=snyk-bot
       - "status-success=License Compliance"
       - "status-success=ci/circleci: build"
       - "status-success=ci/circleci: install"
       - "status-success=ci/circleci: test"
       - "status-success=codecov/patch"
       - "status-success=codecov/project"
-      - "status-success=greenkeeper/verify"
+      - "status-success=security/snyk"
     actions:
       merge:
         method: merge
@@ -21,7 +21,7 @@ pull_request_rules:
       - "status-success=ci/circleci: test"
       - "status-success=codecov/patch"
       - "status-success=codecov/project"
-      - "status-success=greenkeeper/verify"
+      - "status-success=security/snyk"
     actions:
       merge:
         method: merge
