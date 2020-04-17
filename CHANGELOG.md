@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/1.0.1...1.0.2) (2020-04-17)
+
+
+### Bug Fixes
+
+* upgrade middy from 0.34.0 to 0.36.0 ([3af9ca9](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/3af9ca995a6bacb2ab32fa27f8a0ed6fbb3eb5ab))
+
 ## [1.0.1](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/1.0.0...1.0.1) (2020-04-10)
 
 
