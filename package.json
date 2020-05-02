@@ -1,6 +1,6 @@
 {
   "name": "middy-middleware-json-error-handler",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A middy JSON error handler middleware.",
   "homepage": "",
   "license": "MIT",
