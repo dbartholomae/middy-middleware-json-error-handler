@@ -1,6 +1,6 @@
 import { APIGatewayEvent } from 'aws-lambda'
 import createHttpError from 'http-errors'
-import middy from 'middy'
+import middy from '@middy/core'
 import JSONErrorHandlerMiddleware from '../'
 
 // This is your AWS handler

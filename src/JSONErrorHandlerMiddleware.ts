@@ -3,14 +3,14 @@
  */
 /** An additional comment to make sure Typedoc attributes the comment above to the file itself */
 import debugFactory, { IDebugger } from 'debug'
-import { HandlerLambda, MiddlewareFunction, MiddlewareObject } from 'middy'
+import middy from '@middy/core'
 import { serializeError } from 'serialize-error'
 import { omit } from './helpers/omit'
 import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
 
 /** The actual middleware */
 export class JSONErrorHandlerMiddleware
-  implements MiddlewareObject<any, any, any> {
+  implements middy.MiddlewareObject<any, any, any> {
   public static create (): JSONErrorHandlerMiddleware {
     return new JSONErrorHandlerMiddleware()
   }
@@ -24,8 +24,8 @@ export class JSONErrorHandlerMiddleware
     this.logger('Setting up JSONErrorHandlerMiddleware')
   }
 
-  public onError: MiddlewareFunction<any, any> = async (
-    handler: HandlerLambda
+  public onError: middy.MiddlewareFunction<any, any> = async (
+    handler: middy.HandlerLambda
   ) => {
     const error = handler.error
     if (isErrorWithStatusCode(error) && error.statusCode < 500) {

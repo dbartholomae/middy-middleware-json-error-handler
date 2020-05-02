@@ -17,7 +17,7 @@ There is [additional documentation](https://dbartholomae.github.com/middy-middle
 ## Usage
 
 ```typescript
-import middy from 'middy'
+import middy from '@middy/core'
 import JSONErrorHandlerMiddleware from 'middy-middleware-json-error-handler'
 import createHttpError from 'http-errors'
 import { APIGatewayEvent } from 'aws-lambda'
