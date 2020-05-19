@@ -1964,3 +1964,5 @@ patch:
         patched: '2020-05-01T02:10:51.943Z'
     - jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-05-01T02:10:51.943Z'
+    - serverless > @serverless/components > @serverless/platform-client-china > archiver > async > lodash:
+        patched: '2020-05-19T02:13:15.725Z'
