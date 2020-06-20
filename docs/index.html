@@ -81,25 +81,25 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'@middy/core'</span>
-<span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-json-error-handler'</span>
-<span class="hljs-keyword">import</span> createHttpError <span class="hljs-keyword">from</span> <span class="hljs-string">'http-errors'</span>
-<span class="hljs-keyword">import</span> { APIGatewayEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'aws-lambda'</span>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@middy/core&#x27;</span>
+<span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;middy-middleware-json-error-handler&#x27;</span>
+<span class="hljs-keyword">import</span> createHttpError <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;http-errors&#x27;</span>
+<span class="hljs-keyword">import</span> { APIGatewayEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;aws-lambda&#x27;</span>
 
 <span class="hljs-comment">// This is your AWS handler</span>
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">helloWorld</span> (<span class="hljs-params">event: APIGatewayEvent</span>) </span>{
   <span class="hljs-keyword">if</span> (event.queryStringParameters?.search == <span class="hljs-literal">null</span>) {
     <span class="hljs-comment">// If you throw an error with status code, the error will be returned as stringified JSON.</span>
     <span class="hljs-comment">// Only the stack will be omitted.</span>
-    <span class="hljs-keyword">throw</span> createHttpError(<span class="hljs-number">400</span>, <span class="hljs-string">'Query has to include a search'</span>)
+    <span class="hljs-keyword">throw</span> createHttpError(<span class="hljs-number">400</span>, <span class="hljs-string">&#x27;Query has to include a search&#x27;</span>)
   }
 
   <span class="hljs-comment">// If you throw an error with no status code, only a generic message will be shown to the user</span>
   <span class="hljs-comment">// instead of the full error</span>
-  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Search is not implemented yet'</span>)
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;Search is not implemented yet&#x27;</span>)
 }
 
-<span class="hljs-comment">// Let's "middyfy" our handler, then we will be able to attach middlewares to it</span>
+<span class="hljs-comment">// Let&#x27;s &quot;middyfy&quot; our handler, then we will be able to attach middlewares to it</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> handler = middy(helloWorld)
   .use(JSONErrorHandlerMiddleware()) <span class="hljs-comment">// This middleware is needed do handle the errors thrown by the JWTAuthMiddleware</span></code></pre>
 			</div>
