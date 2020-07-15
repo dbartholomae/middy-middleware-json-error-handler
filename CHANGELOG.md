@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.2...2.0.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* depend on @types/debug only for development ([cbb0238](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/cbb02381c7574134f413506744aab2c3d4ffaf4f))
+
 ## [2.0.2](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.1...2.0.2) (2020-06-20)
 
 
