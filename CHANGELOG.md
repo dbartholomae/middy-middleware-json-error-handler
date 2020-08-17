@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.4...2.0.5) (2020-08-17)
+
+
+### Bug Fixes
+
+* package.json to reduce vulnerabilities ([021cd9d](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/021cd9d0a94c367e2766c7474dddd9de8b3790dd))
+
 ## [2.0.4](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.3...2.0.4) (2020-08-09)
 
 
