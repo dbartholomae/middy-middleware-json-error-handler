@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.5...2.0.6) (2020-08-30)
+
+
+### Bug Fixes
+
+* remove snyk ([61674b8](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/61674b87fc4a7b897efa0d624fd4a5d0117215b9))
+* update all dependencies ([70f1539](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/70f15397b3f3b6f175755df15ad3cb029c243213))
+
 ## [2.0.5](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.4...2.0.5) (2020-08-17)
 
 
