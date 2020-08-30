@@ -6,7 +6,7 @@ version: 2
 jobs:
   install:
     docker:
-      - image: circleci/node:12
+      - image: znck/pnpm
     working_directory: ~/repo
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Install packages
           command: |
-            yarn install
+            pnpm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -35,11 +35,11 @@ jobs:
       - run:
           name: Build package
           command: |
-            yarn run build
+            npm run build
       - run:
           name: Build documentation
           command: |
-            yarn run docs
+            npm run docs
             touch ./docs/.nojekyll
       - persist_to_workspace:
           root: .
@@ -56,11 +56,11 @@ jobs:
       - run:
           name: Run Linting
           command: |
-            yarn lint
+            npm run lint
       - run:
           name: Run unit tests
           command: |
-            yarn test:unit --reporters=default --reporters=jest-junit
+            npm run test:unit --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/unit/test-results-unit.xml"
       - run:
@@ -91,7 +91,7 @@ jobs:
     - run:
         name: Publish via semantic release
         command: |
-          yarn run release
+          npm run release
 
 workflows:
   version: 2
