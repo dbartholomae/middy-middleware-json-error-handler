@@ -89,7 +89,7 @@
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-consistent-codestyle": "^1.15.0",
-    "typedoc": "^0.18.0",
+    "typedoc": "^0.19.0",
     "typescript": "^3.1.2",
     "wait-on": "^4.0.0",
     "webpack": "^4.37.0"
