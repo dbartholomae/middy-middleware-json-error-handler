@@ -3,14 +3,25 @@
  */
 /** An additional comment to make sure Typedoc attributes the comment above to the file itself */
 import debugFactory, { IDebugger } from 'debug'
-import middy from '@middy/core'
+import { MiddlewareObj } from '@middy/core'
 import { serializeError } from 'serialize-error'
 import { omit } from './helpers/omit'
 import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
+import {Context as LambdaContext} from 'aws-lambda/handler';
+
+interface Request<TEvent = any, TResult = any, TErr = Error> {
+  event: TEvent
+  context: LambdaContext
+  response: TResult | null
+  error: TErr | null
+  internal: {
+    [key: string]: any
+  }
+}
 
 /** The actual middleware */
 export class JSONErrorHandlerMiddleware
-  implements middy.MiddlewareObject<any, any, any> {
+  implements MiddlewareObj {
   public static create (): JSONErrorHandlerMiddleware {
     return new JSONErrorHandlerMiddleware()
   }
@@ -24,22 +35,20 @@ export class JSONErrorHandlerMiddleware
     this.logger('Setting up JSONErrorHandlerMiddleware')
   }
 
-  public onError: middy.MiddlewareFunction<any, any> = async (
-    handler: middy.HandlerLambda
-  ) => {
-    const error = handler.error
+  public onError = async (request: Request) => {
+    const error = request.error
     if (isErrorWithStatusCode(error) && error.statusCode < 500) {
       this.logger(
         `Responding with full error as statusCode is ${error.statusCode}`
       )
-      handler.response = {
+      request.response = {
         body: JSON.stringify(omit(['stack'], serializeError(error))),
         statusCode: error.statusCode
       }
       return
     }
     this.logger('Responding with internal server error')
-    handler.response = {
+    request.response = {
       body: JSON.stringify({
         message: 'Internal server error',
         statusCode: 500
@@ -47,7 +56,7 @@ export class JSONErrorHandlerMiddleware
       statusCode: 500
     }
     return
-  }
+  };
 }
 
 export default JSONErrorHandlerMiddleware.create
