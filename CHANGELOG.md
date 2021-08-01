@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.6...3.0.0) (2021-08-01)
+
+
+### Features
+
+* update all dependencies ([7c85db9](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/7c85db93a46a491e21d980332f10af7c61947151))
+
+
+### BREAKING CHANGES
+
+* The middleware is now using the new types from middy 2. Based on a quick test, without TypeScript, the new version is still compatible with middy 1.
+
 ## [2.0.6](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.5...2.0.6) (2020-08-30)
 
 
