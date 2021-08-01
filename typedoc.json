@@ -1,6 +1,7 @@
 {
+  "entryPoints": ["./src/index.ts"],
   "exclude": "**/*.spec.ts",
-  "module": "commonjs",
+  "tsconfig": "./tsconfig.docs.json",
   "out": "docs",
   "hideGenerator": true
 }
