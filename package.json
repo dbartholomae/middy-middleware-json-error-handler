@@ -62,7 +62,7 @@
     "@types/aws-lambda": "^8.10.81",
     "@types/debug": "^4.1.7",
     "@types/http-errors": "^1.8.1",
-    "@types/jest": "^26.0.24",
+    "@types/jest": "^27.0.0",
     "@types/supertest": "^2.0.11",
     "aws-lambda": "*",
     "codecov": "^3.8.3",
