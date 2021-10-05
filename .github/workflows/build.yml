@@ -1,0 +1,80 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Lint commit messages
+        uses: wagoid/commitlint-github-action@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v1.2.1
+        with:
+          version: ^5.5.4
+      - name: Install
+        run: pnpm install --frozen-lockfile=false
+      - name: Build
+        run: pnpm run build
+      - name: Build documentation
+        run: |
+          pnpm run docs
+          touch ./docs/.nojekyll
+      - name: Lint
+        run: pnpm run lint
+      - name: Run unit tests
+        run: pnpm run test:unit
+      - name: Upload code coverage to codecov
+        uses: codecov/codecov-action@v1
+      - name: Run integration tests
+        run: pnpm run test:integration
+      - name: Check package output
+        run: pnpx pkg-ok
+
+  publish:
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v1.2.1
+        with:
+          version: ^5.5.4
+      - name: Install
+        run: pnpm install --frozen-lockfile=false
+      - name: Build
+        run: pnpm run build
+      - name: Set git credentials
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+      - name: Set npm credentials
+        run: echo //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN > ~/.npmrc
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 17
+          branches: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
