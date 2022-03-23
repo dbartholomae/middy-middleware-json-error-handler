@@ -48,6 +48,19 @@ describe('JSONErrorHandlerMiddleware', () => {
         await JSONErrorHandlerMiddleware().onError(handler)
         expect(JSON.parse((handler.response as any).body).stack).toBeUndefined()
       })
+
+      it('adds Content-Type header', async () => {
+        const handler = {
+          callback: jest.fn(),
+          context: {} as Context,
+          error: createHttpError(statusCode, 'Oops'),
+          event: {},
+          internal: {},
+          response: {}
+        }
+        await JSONErrorHandlerMiddleware().onError(handler)
+        expect((handler.response as any).headers["Content-Type"]).toBe('application/json')
+      })
     })
 
     describe('with errors wit status code 500', () => {
@@ -80,6 +93,19 @@ describe('JSONErrorHandlerMiddleware', () => {
           message: 'Internal server error',
           statusCode: 500
         })
+      })
+
+      it('adds Content-Type header', async () => {
+        const request = {
+          callback: jest.fn(),
+          context: {} as Context,
+          error: createHttpError(statusCode, 'Oops'),
+          event: {},
+          internal: {},
+          response: {}
+        }
+        await JSONErrorHandlerMiddleware().onError(request)
+        expect((request.response as any).headers["Content-Type"]).toBe('application/json')
       })
     })
   })

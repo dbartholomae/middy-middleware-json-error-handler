@@ -2,6 +2,7 @@
  * # JSON Error Handler Middleware
  */
 /** An additional comment to make sure Typedoc attributes the comment above to the file itself */
+import { APIGatewayProxyResult } from 'aws-lambda'
 import debugFactory, { IDebugger } from 'debug'
 import { MiddlewareObj } from '@middy/core'
 import { serializeError } from 'serialize-error'
@@ -17,6 +18,14 @@ interface Request<TEvent = any, TResult = any, TErr = Error> {
   internal: {
     [key: string]: any
   }
+}
+
+function addContentTypeHeader(response: APIGatewayProxyResult): void {
+  if (!response.headers) {
+    response.headers = {}
+  }
+
+  response.headers['Content-Type'] = 'application/json'
 }
 
 /** The actual middleware */
@@ -45,6 +54,7 @@ export class JSONErrorHandlerMiddleware
         body: JSON.stringify(omit(['stack'], serializeError(error))),
         statusCode: error.statusCode
       }
+      addContentTypeHeader(request.response)
       return
     }
     this.logger('Responding with internal server error')
@@ -55,6 +65,7 @@ export class JSONErrorHandlerMiddleware
       }),
       statusCode: 500
     }
+    addContentTypeHeader(request.response)
     return
   };
 }
