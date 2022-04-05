@@ -73,7 +73,7 @@ jobs:
       - name: Publish
         uses: cycjimmy/semantic-release-action@v2
         with:
-          semantic_version: 17
+          semantic_version: 19
           branches: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
