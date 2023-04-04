@@ -75,7 +75,7 @@
     "lint-staged": "^13.0.0",
     "pkg-ok": "^3.0.0",
     "prettier-standard": "^16.4.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.4.1",
     "semantic-release": "^19.0.2",
     "serverless": "^3.4.0",
     "serverless-offline": "^8.5.0",
