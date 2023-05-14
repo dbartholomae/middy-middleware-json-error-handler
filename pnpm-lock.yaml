@@ -36,7 +36,7 @@ specifiers:
   source-map-support: ^0.5.19
   supertest: ^6.1.4
   ts-jest: ^27.1.3
-  ts-loader: ^9.2.4
+  ts-loader: ^9.4.2
   tslib: ^2.3.0
   tslint: ^6.1.3
   tslint-config-prettier: ^1.18.0
@@ -85,7 +85,7 @@ devDependencies:
   source-map-support: 0.5.19
   supertest: 6.1.4
   ts-jest: 27.1.3_lf2mckervc2dy6haamnpf7me4e
-  ts-loader: 9.2.4_hybrf64lftnf5l2xwgg7goi2iu
+  ts-loader: 9.4.2_hybrf64lftnf5l2xwgg7goi2iu
   tslint: 6.1.3_typescript@4.9.5
   tslint-config-prettier: 1.18.0
   tslint-consistent-codestyle: 1.16.0_zmprxdwqpgzzlt6igyqeohu7hy
@@ -3807,14 +3807,6 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       graceful-fs: 4.2.9
-      tapable: 2.2.0
-    dev: true
-
-  /enhanced-resolve/5.8.2:
-    resolution: {integrity: sha512-F27oB3WuHDzvR2DOGNTaYy0D5o0cnrv8TeI482VM4kYgQd/FT9lUQwuNsJ0oOHtBUq7eiW5ytqzp7nBFknL+GA==}
-    engines: {node: '>=10.13.0'}
-    dependencies:
-      graceful-fs: 4.2.6
       tapable: 2.2.0
     dev: true
 
@@ -9689,17 +9681,17 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-loader/9.2.4_hybrf64lftnf5l2xwgg7goi2iu:
-    resolution: {integrity: sha512-Ats2BCqPFBkgsoZUmmYMjuQu+iBNExt4o3QDsJqRMuPdStWlnOthdqX/GHHJnxSSgw7Gu6Hll/MD5b4usgKFOg==}
+  /ts-loader/9.4.2_hybrf64lftnf5l2xwgg7goi2iu:
+    resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
       webpack: ^5.0.0
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.8.2
-      micromatch: 4.0.4
-      semver: 7.3.5
+      enhanced-resolve: 5.14.0
+      micromatch: 4.0.5
+      semver: 7.5.0
       typescript: 4.9.5
       webpack: 5.82.1
     dev: true
