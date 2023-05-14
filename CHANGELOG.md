@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/3.0.0...3.0.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* update dependencies that show security warnings ([e3ba58c](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/e3ba58cbb8f29b610abe2739a81b62db2454805b))
+
 # [3.0.0](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/2.0.6...3.0.0) (2021-08-01)
 
 
