@@ -23,7 +23,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.1
         with:
-          version: ^5.5.4
+          version: ^7.32.0
       - name: Install
         run: pnpm install --frozen-lockfile=false
       - name: Build
@@ -57,7 +57,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v1.2.1
         with:
-          version: ^5.5.4
+          version: ^7.32.0
       - name: Install
         run: pnpm install --frozen-lockfile=false
       - name: Build
