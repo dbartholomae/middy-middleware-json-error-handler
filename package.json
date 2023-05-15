@@ -63,7 +63,7 @@
     "@types/debug": "^4.1.7",
     "@types/http-errors": "^1.8.1",
     "@types/jest": "^27.4.1",
-    "@types/node": "^16.11.7",
+    "@types/node": "^20.1.4",
     "@types/supertest": "^2.0.11",
     "aws-lambda": "*",
     "codecov": "^3.8.3",
