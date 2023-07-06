@@ -24,7 +24,7 @@ devDependencies:
     version: 17.6.6
   '@middy/core':
     specifier: ^4.4.1
-    version: 4.5.3
+    version: 4.5.5
   '@semantic-release/changelog':
     specifier: ^6.0.1
     version: 6.0.3(semantic-release@21.0.7)
@@ -1294,8 +1294,8 @@ packages:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
 
-  /@middy/core@4.5.3:
-    resolution: {integrity: sha512-S6dV1xpfMRTDa0xPKNUAloeo7ZFvUd5VrKu6eQ3r5k0umHeQCPO+37fuVOBzn3C0yY+wy4sdllcHsnQZcBOarg==}
+  /@middy/core@4.5.5:
+    resolution: {integrity: sha512-aufpLnrpIcGrpd1cjqWR1fc5iSbO2K63GPkUooT+jtI/M7mofqSkr1dtfPx7fRtAFlZVuAjHCF52wJxGgfj1Ng==}
     engines: {node: '>=16'}
     dev: true
 
