@@ -43,7 +43,11 @@ async function helloWorld (event: APIGatewayEvent) {
   throw new Error('Search is not implemented yet')
 }
 
-// Let's "middyfy" our handler, then we will be able to attach middlewares to it
+// Specify which are the error properties to omit in response (by default, only the stack is omitted)
+const options = {
+  errorPropertiesToOmit: ['name', 'statusCode', 'stack']
+}
+// Let's "middyfy" our handler, then we will be able to attach middlewares to it (options parameter is optional)
 export const handler = middy(helloWorld)
-  .use(JSONErrorHandlerMiddleware()) // This middleware is needed do handle the errors thrown by the handler
+  .use(JSONErrorHandlerMiddleware(options)) // This middleware is needed do handle the errors thrown by the handler
 ```

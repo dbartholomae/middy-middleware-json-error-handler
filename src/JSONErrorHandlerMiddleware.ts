@@ -3,11 +3,12 @@
  */
 /** An additional comment to make sure Typedoc attributes the comment above to the file itself */
 import debugFactory, { IDebugger } from 'debug'
-import { MiddlewareObj } from '@middy/core'
-import { serializeError } from 'serialize-error'
-import { omit } from './helpers/omit'
-import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
+
 import {Context as LambdaContext} from 'aws-lambda/handler';
+import { MiddlewareObj } from '@middy/core'
+import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
+import { omit } from './helpers/omit'
+import { serializeError } from 'serialize-error'
 
 interface Request<TEvent = any, TResult = any, TErr = Error> {
   event: TEvent
@@ -19,20 +20,28 @@ interface Request<TEvent = any, TResult = any, TErr = Error> {
   }
 }
 
+export interface Options {
+  errorPropertiesToOmit?: string[]
+}
+
 /** The actual middleware */
 export class JSONErrorHandlerMiddleware
   implements MiddlewareObj {
-  public static create (): JSONErrorHandlerMiddleware {
-    return new JSONErrorHandlerMiddleware()
+  public static create (options?: Options): JSONErrorHandlerMiddleware {
+    return new JSONErrorHandlerMiddleware(options)
   }
 
   /** The logger used in the module */
   private readonly logger: IDebugger
 
+  /** The list of properties to omit from the error object */
+  private readonly errorPropertiesToOmit: string[]
+
   /** Creates a new JSON error handler middleware */
-  constructor () {
+  constructor ({ errorPropertiesToOmit = ['stack'] }: Options = {}) {
     this.logger = debugFactory('middy-middleware-json-error-handler')
     this.logger('Setting up JSONErrorHandlerMiddleware')
+    this.errorPropertiesToOmit = errorPropertiesToOmit;
   }
 
   public onError = async (request: Request) => {
@@ -42,7 +51,7 @@ export class JSONErrorHandlerMiddleware
         `Responding with full error as statusCode is ${error.statusCode}`
       )
       request.response = {
-        body: JSON.stringify(omit(['stack'], serializeError(error))),
+        body: JSON.stringify(omit(this.errorPropertiesToOmit, serializeError(error))),
         statusCode: error.statusCode
       }
       return
