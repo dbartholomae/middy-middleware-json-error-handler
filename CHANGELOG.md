@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/3.0.1...3.1.0) (2023-07-22)
+
+
+### Features
+
+* allow choosing which error properties to omit ([d395b92](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/d395b920aa2382e749ff7673f040cf700d8a7876))
+
 ## [3.0.1](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/3.0.0...3.0.1) (2023-05-14)
 
 
