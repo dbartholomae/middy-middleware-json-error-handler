@@ -1,6 +1,5 @@
-import JSONErrorHandlerMiddleware from './JSONErrorHandlerMiddleware'
-
 import { Context } from 'aws-lambda'
+import JSONErrorHandlerMiddleware from './JSONErrorHandlerMiddleware'
 import createHttpError from 'http-errors'
 
 describe('JSONErrorHandlerMiddleware', () => {
@@ -36,7 +35,7 @@ describe('JSONErrorHandlerMiddleware', () => {
         })
       })
 
-      it('strips the stack', async () => {
+      it('strips the stack by default', async () => {
         const handler = {
           callback: jest.fn(),
           context: {} as Context,
@@ -47,6 +46,21 @@ describe('JSONErrorHandlerMiddleware', () => {
         }
         await JSONErrorHandlerMiddleware().onError(handler)
         expect(JSON.parse((handler.response as any).body).stack).toBeUndefined()
+      })
+
+      it('strips the name and statusCode when specified in options', async () => {
+        const handler = {
+          callback: jest.fn(),
+          context: {} as Context,
+          error: createHttpError(statusCode, 'Oops'),
+          event: {},
+          internal: {},
+          response: {}
+        }
+        await JSONErrorHandlerMiddleware({ errorPropertiesToOmit: ['name', 'statusCode'] }).onError(handler)
+        expect(JSON.parse((handler.response as any).body).name).toBeUndefined()
+        expect(JSON.parse((handler.response as any).body).statusCode).toBeUndefined()
+        expect(JSON.parse((handler.response as any).body).stack).toBeDefined()
       })
     })
 
