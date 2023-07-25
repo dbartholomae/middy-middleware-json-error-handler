@@ -105,7 +105,7 @@ devDependencies:
     version: 8.5.0(serverless@3.33.0)
   serverless-webpack:
     specifier: ^5.6.1
-    version: 5.11.0(@types/node@20.4.4)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2)
+    version: 5.12.0(@types/node@20.4.4)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2)
   source-map-support:
     specifier: ^0.5.19
     version: 0.5.21
@@ -9055,14 +9055,6 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
-  /semver@7.5.1:
-    resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
   /semver@7.5.2:
     resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
     engines: {node: '>=10'}
@@ -9135,8 +9127,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /serverless-webpack@5.11.0(@types/node@20.4.4)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2):
-    resolution: {integrity: sha512-0OjwSAMrf1OZZfbFwWUGuqz9eiMJIinTRWz2XNkKD3TY5EifvwU7oAF7mEXKPZTgtVhusSzz408C3FWgcIHizg==}
+  /serverless-webpack@5.12.0(@types/node@20.4.4)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2):
+    resolution: {integrity: sha512-krXmz20rT4X9WkiT6nnH/o+gOVof+SFXKTsCTOY2eDF+9PS4UKtGlzZkjNyDV62lCQgD7nmXPbdY2hYoGmyeYg==}
     engines: {node: '>= 10.12.0'}
     peerDependencies:
       '@types/node': '*'
@@ -9157,7 +9149,7 @@ packages:
       glob: 7.2.3
       is-builtin-module: 3.2.1
       lodash: 4.17.21
-      semver: 7.5.1
+      semver: 7.5.3
       serverless: 3.33.0(debug@4.3.4)
       typescript: 4.9.5
       webpack: 5.88.2
