@@ -6,6 +6,7 @@ import debugFactory, { IDebugger } from 'debug'
 
 import {Context as LambdaContext} from 'aws-lambda/handler';
 import { MiddlewareObj } from '@middy/core'
+import { isErrorWithExpose } from './interfaces/IErrorWithExpose';
 import { isErrorWithStatusCode } from './interfaces/IErrorWithStatusCode'
 import { omit } from './helpers/omit'
 import { serializeError } from 'serialize-error'
@@ -38,7 +39,7 @@ export class JSONErrorHandlerMiddleware
   private readonly errorPropertiesToOmit: string[]
 
   /** Creates a new JSON error handler middleware */
-  constructor ({ errorPropertiesToOmit = ['stack'] }: Options = {}) {
+  constructor ({ errorPropertiesToOmit = ['stack', 'expose'] }: Options = {}) {
     this.logger = debugFactory('middy-middleware-json-error-handler')
     this.logger('Setting up JSONErrorHandlerMiddleware')
     this.errorPropertiesToOmit = errorPropertiesToOmit;
@@ -46,9 +47,9 @@ export class JSONErrorHandlerMiddleware
 
   public onError = async (request: Request) => {
     const error = request.error
-    if (isErrorWithStatusCode(error) && error.statusCode < 500) {
-      this.logger(
-        `Responding with full error as statusCode is ${error.statusCode}`
+    if (isErrorWithStatusCode(error) && this.shouldExposeError(error)) {
+       this.logger(
+         `Responding with full error as statusCode is ${error.statusCode}`
       )
       request.response = {
         body: JSON.stringify(omit(this.errorPropertiesToOmit, serializeError(error))),
@@ -66,6 +67,10 @@ export class JSONErrorHandlerMiddleware
     }
     return
   };
+
+  private shouldExposeError (error: any): boolean {
+    return isErrorWithExpose(error) ? error.expose : error.statusCode < 500
+  }
 }
 
 export default JSONErrorHandlerMiddleware.create
