@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/3.1.0...4.0.0) (2023-07-26)
+
+
+### Features
+
+* allow to expose internal errors via expose property ([309084d](https://github.com/dbartholomae/middy-middleware-json-error-handler/commit/309084dc6067400fd915200f69aac1a3b9ff140d))
+
+
+### BREAKING CHANGES
+
+* errors with the `expose` property set to a truthy
+value will be exposed even if their status code is >= 500
+
 # [3.1.0](https://github.com/dbartholomae/middy-middleware-json-error-handler/compare/3.0.1...3.1.0) (2023-07-22)
 
 
