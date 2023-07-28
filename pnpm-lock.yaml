@@ -105,7 +105,7 @@ devDependencies:
     version: 8.5.0(serverless@3.33.0)
   serverless-webpack:
     specifier: ^5.6.1
-    version: 5.12.0(@types/node@20.4.5)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2)
+    version: 5.13.0(@types/node@20.4.5)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2)
   source-map-support:
     specifier: ^0.5.19
     version: 0.5.21
@@ -4867,6 +4867,17 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /glob@8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.6
+      once: 1.4.0
+    dev: true
+
   /global-dirs@0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -7337,6 +7348,13 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
+  /minimatch@5.1.6:
+    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimatch@9.0.0:
     resolution: {integrity: sha512-0jJj8AvgKqWN05mrwuqi8QYKx1WmYSUoKSxu5Qhs9prezTz10sxAHGNZe9J9cqIJzta8DWsleh2KaVaLl6Ru2w==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -9127,9 +9145,9 @@ packages:
       - utf-8-validate
     dev: true
 
-  /serverless-webpack@5.12.0(@types/node@20.4.5)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2):
-    resolution: {integrity: sha512-krXmz20rT4X9WkiT6nnH/o+gOVof+SFXKTsCTOY2eDF+9PS4UKtGlzZkjNyDV62lCQgD7nmXPbdY2hYoGmyeYg==}
-    engines: {node: '>= 10.12.0'}
+  /serverless-webpack@5.13.0(@types/node@20.4.5)(serverless@3.33.0)(typescript@4.9.5)(webpack@5.88.2):
+    resolution: {integrity: sha512-isMEbXbAK1F8YZJfeKgYA5uNuXPFzdHwZyRA9SuMGXVY2L8t1JIzPvRDLZiT4F3uQm16woyal+uaoDyxQo13vg==}
+    engines: {node: '>= 14'}
     peerDependencies:
       '@types/node': '*'
       serverless: 1 || 2 || 3
@@ -9145,8 +9163,8 @@ packages:
       archiver: 5.3.1
       bluebird: 3.7.2
       find-yarn-workspace-root: 2.0.0
-      fs-extra: 9.1.0
-      glob: 7.2.3
+      fs-extra: 11.1.1
+      glob: 8.1.0
       is-builtin-module: 3.2.1
       lodash: 4.17.21
       semver: 7.5.3
