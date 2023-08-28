@@ -27,7 +27,7 @@
   "private": false,
   "dependencies": {
     "debug": "^4.3.4",
-    "serialize-error": "^8.1.0",
+    "serialize-error": "^11.0.2",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
@@ -88,7 +88,7 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-consistent-codestyle": "^1.16.0",
-    "typedoc": "^0.24.7",
+    "typedoc": "^0.25.0",
     "typescript": "^5.1.6",
     "wait-on": "^7.0.1",
     "webpack": "^5.82.1"
