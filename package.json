@@ -27,7 +27,7 @@
   "private": false,
   "dependencies": {
     "debug": "^4.3.4",
-    "serialize-error": "^8.1.0",
+    "serialize-error": "^11.0.2",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
