@@ -8,3 +8,6 @@ updates:
       all:
         patterns:
           - "*"
+        exclude-patterns:
+          # All versions from 9.x on only support ESM, while this package also supports CSM
+          - "serialize-error"
