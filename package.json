@@ -21,9 +21,7 @@
     "json"
   ],
   "types": "lib/index.d.ts",
-  "engines": {
-    "npm": ">= 4.0.0"
-  },
+  "packageManager": "pnpm@9.4.0",
   "private": false,
   "dependencies": {
     "debug": "^4.3.4",

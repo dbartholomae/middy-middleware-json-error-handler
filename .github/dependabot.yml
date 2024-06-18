@@ -11,3 +11,7 @@ updates:
         exclude-patterns:
           # All versions from 9.x on only support ESM, while this package also supports CSM
           - "serialize-error"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
