@@ -26,7 +26,7 @@ importers:
         version: 19.5.0
       '@middy/core':
         specifier: ^5.0.2
-        version: 5.4.7
+        version: 5.5.0
       '@semantic-release/changelog':
         specifier: ^6.0.1
         version: 6.0.3(semantic-release@24.1.1(typescript@5.6.2))
@@ -1241,8 +1241,8 @@ packages:
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
 
-  '@middy/core@5.4.7':
-    resolution: {integrity: sha512-JBbpRat5x7c0tOXyIMrCWRvQG3VDEFPG7Av0Wbr4rP57mg/MSH9pnB8pMtY5COi2HDn6Y2g2pnorJhNq1X2ghg==}
+  '@middy/core@5.5.0':
+    resolution: {integrity: sha512-TzJt9uNHBvd5GY/YNrae0rnRUxuv8yobD9UkQw87Y6B5a6YACzxfPpoyb997CYWw34ToFqGOWs5LCmb4/v2etg==}
     engines: {node: '>=18'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -9449,7 +9449,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@middy/core@5.4.7':
+  '@middy/core@5.5.0':
     dependencies:
       '@datastream/core': 0.0.38
 
