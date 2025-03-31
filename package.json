@@ -76,7 +76,7 @@
     "prettier-standard": "^16.4.1",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.0.0",
-    "serverless": "^3.34.0",
+    "serverless": "^4.9.1",
     "serverless-offline": "^14.0.0",
     "serverless-webpack": "^5.13.0",
     "source-map-support": "^0.5.19",
